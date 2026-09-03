@@ -179,14 +179,21 @@ section { scroll-margin-top: 96px; }
 
 /* ===== Pillar icon accents: subtle looping motion ===== */
 .icon-accent { transform-box: fill-box; transform-origin: 50% 50%; }
-.icon-arrows { animation: iconArrowsLoop 6.5s cubic-bezier(.45,0,.25,1) infinite; }
-@keyframes iconArrowsLoop {
-  0%   { opacity: 0; transform: rotate(-10deg); }
-  20%  { opacity: 1; transform: rotate(0deg); }
-  55%  { opacity: 1; transform: rotate(9deg); }
-  85%  { opacity: 1; transform: rotate(0deg); }
-  100% { opacity: 0; transform: rotate(-10deg); }
+
+/* Icon 01: draw arrow 1, draw arrow 2, spin together x2, fade out one then the other */
+.icon-arrows-spin { transform-box: fill-box; transform-origin: 50% 50%; animation: iconArrowsSpin 8s cubic-bezier(.45,0,.25,1) infinite; }
+@keyframes iconArrowsSpin {
+  0%, 42%   { transform: rotate(0deg); }
+  80%, 100% { transform: rotate(720deg); }
 }
+.icon-arrow1-draw { animation: iconArrowDraw1 8s cubic-bezier(.4,0,.3,1) infinite; }
+.icon-arrow2-draw { animation: iconArrowDraw2 8s cubic-bezier(.4,0,.3,1) infinite; }
+@keyframes iconArrowDraw1 { 0%, 4%  { stroke-dashoffset: 425; } 20% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
+@keyframes iconArrowDraw2 { 0%, 22% { stroke-dashoffset: 425; } 40% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
+.icon-arrow1-fade { animation: iconArrow1Fade 8s linear infinite; }
+.icon-arrow2-fade { animation: iconArrow2Fade 8s linear infinite; }
+@keyframes iconArrow1Fade { 0%, 80% { opacity: 1; } 88%, 100% { opacity: 0; } }
+@keyframes iconArrow2Fade { 0%, 88% { opacity: 1; } 98%, 100% { opacity: 0; } }
 
 .icon-pulse-wipe { transform-box: view-box; transform-origin: 0 0; animation: iconPulseWipe 6.5s cubic-bezier(.45,0,.25,1) infinite; }
 .icon-pulse-fade { animation: iconPulseFade 6.5s linear infinite; }
@@ -210,6 +217,8 @@ section { scroll-margin-top: 96px; }
 
 @media (prefers-reduced-motion: reduce) {
   .pillar-icon .icon-accent,
+  .pillar-icon .icon-arrows-spin, .pillar-icon .icon-arrow1-draw, .pillar-icon .icon-arrow2-draw,
+  .pillar-icon .icon-arrow1-fade, .pillar-icon .icon-arrow2-fade,
   .pillar-icon .icon-pulse-wipe, .pillar-icon .icon-pulse-fade,
   .pillar-icon .icon-ring, .pillar-icon .icon-check, .pillar-icon .icon-ringcheck-fade {
     animation: none !important;
