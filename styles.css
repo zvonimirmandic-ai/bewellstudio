@@ -177,14 +177,8 @@ section { scroll-margin-top: 96px; }
 .pillar-more { margin-top: 44px; font-size: 18px; }
 .pillar-more a { font-weight: 600; }
 
-@keyframes rDraw { 0% { stroke-dashoffset: 528; } 30% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
-@keyframes cDraw { 0%, 32% { stroke-dashoffset: 212; } 52% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
-@keyframes rcFade { 0%, 72% { opacity: 1; } 95%, 100% { opacity: 0; } }
 @keyframes dynGreenFade { 0%,8.3% { opacity: 0; } 16.6%,62.5% { opacity: 1; } 69%,100% { opacity: 0; } }
 @keyframes dynLineDraw { 0%,16.6% { stroke-dashoffset: 2600; } 50%,69% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -2600; } }
-@media (prefers-reduced-motion: reduce) {
-  [data-icon] svg * { animation: none !important; stroke-dashoffset: 0 !important; }
-}
 
 /* ===== CARE section ===== */
 .care-section { position: relative; padding: 118px 0 124px; background: var(--darker-green); color: #fff; overflow: hidden; }
