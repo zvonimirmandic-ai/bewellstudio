@@ -177,11 +177,6 @@ section { scroll-margin-top: 96px; }
 .pillar-more { margin-top: 44px; font-size: 18px; }
 .pillar-more a { font-weight: 600; }
 
-@keyframes bDraw { 0% { stroke-dashoffset: 849; } 26% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
-@keyframes bSpin { 0%, 28% { transform: rotate(0deg); } 72%, 100% { transform: rotate(360deg); } }
-@keyframes bFade { 0%, 76% { opacity: 1; } 95%, 100% { opacity: 0; } }
-@keyframes eSweep { 0% { transform: scaleX(0); } 26% { transform: scaleX(.36); } 33% { transform: scaleX(.47); } 40% { transform: scaleX(.52); } 47% { transform: scaleX(.62); } 54% { transform: scaleX(.68); } 66% { transform: scaleX(1); } 100% { transform: scaleX(1); } }
-@keyframes eFade { 0%, 74% { opacity: 1; } 94%, 100% { opacity: 0; } }
 @keyframes rDraw { 0% { stroke-dashoffset: 528; } 30% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
 @keyframes cDraw { 0%, 32% { stroke-dashoffset: 212; } 52% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
 @keyframes rcFade { 0%, 72% { opacity: 1; } 95%, 100% { opacity: 0; } }
