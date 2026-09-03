@@ -236,7 +236,7 @@ section { scroll-margin-top: 96px; }
 @keyframes dynLineDraw { 0%,16.6% { stroke-dashoffset: 2600; } 50%,69% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -2600; } }
 
 /* ===== CARE section ===== */
-.care-section { position: relative; padding: 118px 0 124px; background: var(--darker-green); color: #fff; overflow: hidden; }
+.care-section { position: relative; padding: 118px 0 124px; background: var(--darker-green); color: #fff; }
 .care-watermark {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
   pointer-events: none; overflow: hidden;
@@ -265,7 +265,7 @@ section { scroll-margin-top: 96px; }
 
 .phase-intro { margin-top: 72px; font-size: 19.5px; color: rgba(255,255,255,.72); }
 .phase-rail {
-  position: sticky; top: 12px; z-index: 20; margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px;
+  position: sticky; top: 90px; z-index: 20; margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px;
   padding: 10px; max-width: 100%; border-radius: 999px; background: rgba(7,29,18,.72);
   backdrop-filter: blur(10px); border: 1px solid rgba(159,224,187,.18); width: fit-content;
 }
