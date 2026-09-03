@@ -430,7 +430,7 @@
         </label>
         <label class="consent-field">
           <input type="checkbox" required>
-          <span>Dajem suglasnost za obradu osobnih podataka u svrhu odgovora na upit. <a href="#podnozje">Izjava o privatnosti</a> *</span>
+          <span>Dajem suglasnost za obradu osobnih podataka u svrhu odgovora na upit. <a href="privatnost.html">Izjava o privatnosti</a> *</span>
         </label>
         <button type="submit" class="pill-btn">Pošaljite upit</button>
       </form>
@@ -446,7 +446,12 @@
           <p><strong>Radno vrijeme</strong><br>pon–pet 07:00–21:00 · sub 08:00–13:00 · ned zatvoreno</p>
           <p><strong>Društvene mreže</strong><br><a href="#kontakt">Instagram</a> · <a href="#kontakt">Facebook</a></p>
         </div>
-        <div class="map-embed"><iframe src="https://www.google.com/maps?q=XI+Podbre%C5%BEje+1,+Zagreb&output=embed" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokacija BeWell studija"></iframe></div>
+        <div class="map-embed" id="mapEmbed" data-map-src="https://www.google.com/maps?q=XI+Podbre%C5%BEje+1,+Zagreb&output=embed">
+          <div class="map-placeholder" id="mapPlaceholder">
+            <p>Karta se učitava putem Google Mapsa, što uključuje postavljanje kolačića treće strane.</p>
+            <button type="button" class="pill-btn--outline" id="mapLoadBtn" style="color:#14512F; border-color:rgba(15,59,35,.35)">Prikaži kartu</button>
+          </div>
+        </div>
         <p class="map-caption">Parkiranje ispred studija · Tramvaj 7, 14 (stanica Trnsko) · Autobus 109 (stanica Trnsko) · Autobus 234, 243 (stanica Cimermanova)</p>
       </div>
     </div>
@@ -472,10 +477,11 @@
         <p style="margin-top:14px">pon–pet 07:00–21:00<br>sub 08:00–13:00</p>
       </div>
       <div class="footer-links">
-        <a href="#podnozje">Izjava o privatnosti</a>
-        <a href="#podnozje">Uvjeti korištenja</a>
-        <a href="#podnozje">Kolačići</a>
-        <a href="#podnozje">Impressum</a>
+        <a href="privatnost.html">Izjava o privatnosti</a>
+        <a href="uvjeti-koristenja.html">Uvjeti korištenja</a>
+        <a href="kolacici.html">Kolačići</a>
+        <a href="impressum.html">Impressum</a>
+        <button type="button" class="cookie-settings-btn" onclick="window.reopenCookieSettings && window.reopenCookieSettings()">Postavke kolačića</button>
         <p class="footer-oib">[Naziv obrta], OIB [•••]</p>
       </div>
     </div>
@@ -484,5 +490,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="cookie-consent.js"></script>
 </body>
 </html>
