@@ -186,10 +186,10 @@ section { scroll-margin-top: 96px; }
   0%, 42%   { transform: rotate(0deg); }
   80%, 100% { transform: rotate(720deg); }
 }
-.icon-arrow1-draw { animation: iconArrowDraw1 8s cubic-bezier(.4,0,.3,1) infinite; }
-.icon-arrow2-draw { animation: iconArrowDraw2 8s cubic-bezier(.4,0,.3,1) infinite; }
-@keyframes iconArrowDraw1 { 0%, 4%  { stroke-dashoffset: 425; } 20% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
-@keyframes iconArrowDraw2 { 0%, 22% { stroke-dashoffset: 425; } 40% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
+.icon-arrow1-wipe { transform-box: view-box; transform-origin: 225px 312.5px; animation: iconArrow1Wipe 8s cubic-bezier(.4,0,.3,1) infinite; }
+.icon-arrow2-wipe { transform-box: view-box; transform-origin: 255px 167.5px; animation: iconArrow2Wipe 8s cubic-bezier(.4,0,.3,1) infinite; }
+@keyframes iconArrow1Wipe { 0%, 4%  { transform: scaleX(0); } 20% { transform: scaleX(1); } 100% { transform: scaleX(1); } }
+@keyframes iconArrow2Wipe { 0%, 22% { transform: scaleX(0); } 40% { transform: scaleX(1); } 100% { transform: scaleX(1); } }
 .icon-arrow1-fade { animation: iconArrow1Fade 8s linear infinite; }
 .icon-arrow2-fade { animation: iconArrow2Fade 8s linear infinite; }
 @keyframes iconArrow1Fade { 0%, 80% { opacity: 1; } 88%, 100% { opacity: 0; } }
@@ -217,7 +217,7 @@ section { scroll-margin-top: 96px; }
 
 @media (prefers-reduced-motion: reduce) {
   .pillar-icon .icon-accent,
-  .pillar-icon .icon-arrows-spin, .pillar-icon .icon-arrow1-draw, .pillar-icon .icon-arrow2-draw,
+  .pillar-icon .icon-arrows-spin, .pillar-icon .icon-arrow1-wipe, .pillar-icon .icon-arrow2-wipe,
   .pillar-icon .icon-arrow1-fade, .pillar-icon .icon-arrow2-fade,
   .pillar-icon .icon-pulse-wipe, .pillar-icon .icon-pulse-fade,
   .pillar-icon .icon-ring, .pillar-icon .icon-check, .pillar-icon .icon-ringcheck-fade {
