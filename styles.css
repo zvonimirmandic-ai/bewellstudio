@@ -177,6 +177,48 @@ section { scroll-margin-top: 96px; }
 .pillar-more { margin-top: 44px; font-size: 18px; }
 .pillar-more a { font-weight: 600; }
 
+/* ===== Pillar icon accents: subtle looping motion ===== */
+.icon-accent { transform-box: fill-box; transform-origin: 50% 50%; }
+.icon-arrows { animation: iconArrowsLoop 6.5s cubic-bezier(.45,0,.25,1) infinite; }
+@keyframes iconArrowsLoop {
+  0%   { opacity: 0; transform: rotate(-10deg); }
+  20%  { opacity: 1; transform: rotate(0deg); }
+  55%  { opacity: 1; transform: rotate(9deg); }
+  85%  { opacity: 1; transform: rotate(0deg); }
+  100% { opacity: 0; transform: rotate(-10deg); }
+}
+
+.icon-pulse-wipe { transform-box: view-box; transform-origin: 0 0; animation: iconPulseWipe 6.5s cubic-bezier(.45,0,.25,1) infinite; }
+.icon-pulse-fade { animation: iconPulseFade 6.5s linear infinite; }
+@keyframes iconPulseWipe {
+  0%, 10% { transform: scaleX(0); }
+  48%     { transform: scaleX(1); }
+  100%    { transform: scaleX(1); }
+}
+@keyframes iconPulseFade {
+  0%, 10% { opacity: 0; }
+  20%, 72% { opacity: 1; }
+  92%, 100% { opacity: 0; }
+}
+
+.icon-ring { animation: iconRingDraw 6.5s cubic-bezier(.4,0,.3,1) infinite; }
+.icon-check { animation: iconCheckDraw 6.5s cubic-bezier(.5,0,.4,1) infinite; }
+.icon-ringcheck-fade { animation: iconRingCheckFade 6.5s linear infinite; }
+@keyframes iconRingDraw { 0%, 8% { stroke-dashoffset: 528; } 42% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
+@keyframes iconCheckDraw { 0%, 24% { stroke-dashoffset: 212; } 48% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
+@keyframes iconRingCheckFade { 0%, 10% { opacity: 0; } 20%, 76% { opacity: 1; } 94%, 100% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .pillar-icon .icon-accent,
+  .pillar-icon .icon-pulse-wipe, .pillar-icon .icon-pulse-fade,
+  .pillar-icon .icon-ring, .pillar-icon .icon-check, .pillar-icon .icon-ringcheck-fade {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+
 @keyframes dynGreenFade { 0%,8.3% { opacity: 0; } 16.6%,62.5% { opacity: 1; } 69%,100% { opacity: 0; } }
 @keyframes dynLineDraw { 0%,16.6% { stroke-dashoffset: 2600; } 50%,69% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -2600; } }
 
