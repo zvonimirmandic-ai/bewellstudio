@@ -195,17 +195,17 @@ section { scroll-margin-top: 96px; }
 @keyframes iconArrow1Fade { 0%, 80% { opacity: 1; } 88%, 100% { opacity: 0; } }
 @keyframes iconArrow2Fade { 0%, 88% { opacity: 1; } 98%, 100% { opacity: 0; } }
 
-.icon-pulse-wipe { transform-box: view-box; transform-origin: 0 0; animation: iconPulseWipe 6.5s cubic-bezier(.45,0,.25,1) infinite; }
-.icon-pulse-fade { animation: iconPulseFade 6.5s linear infinite; }
-@keyframes iconPulseWipe {
-  0%, 10% { transform: scaleX(0); }
-  48%     { transform: scaleX(1); }
-  100%    { transform: scaleX(1); }
+.icon-pulse-reveal { transform-box: view-box; transform-origin: 0 0; animation: iconPulseReveal 7s cubic-bezier(.45,0,.25,1) infinite; }
+.icon-pulse-erase { transform-box: view-box; transform-origin: 0 0; animation: iconPulseErase 7s cubic-bezier(.45,0,.25,1) infinite; }
+@keyframes iconPulseReveal {
+  0%, 8% { transform: scaleX(0); }
+  45%    { transform: scaleX(1); }
+  100%   { transform: scaleX(1); }
 }
-@keyframes iconPulseFade {
-  0%, 10% { opacity: 0; }
-  20%, 72% { opacity: 1; }
-  92%, 100% { opacity: 0; }
+@keyframes iconPulseErase {
+  0%, 65% { transform: scaleX(0); }
+  95%     { transform: scaleX(1); }
+  100%    { transform: scaleX(1); }
 }
 
 .icon-ring { animation: iconRingDraw 6.5s cubic-bezier(.4,0,.3,1) infinite; }
@@ -219,12 +219,16 @@ section { scroll-margin-top: 96px; }
   .pillar-icon .icon-accent,
   .pillar-icon .icon-arrows-spin, .pillar-icon .icon-arrow1-wipe, .pillar-icon .icon-arrow2-wipe,
   .pillar-icon .icon-arrow1-fade, .pillar-icon .icon-arrow2-fade,
-  .pillar-icon .icon-pulse-wipe, .pillar-icon .icon-pulse-fade,
+  .pillar-icon .icon-pulse-reveal,
   .pillar-icon .icon-ring, .pillar-icon .icon-check, .pillar-icon .icon-ringcheck-fade {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
     stroke-dashoffset: 0 !important;
+  }
+  .pillar-icon .icon-pulse-erase {
+    animation: none !important;
+    transform: scaleX(0) !important;
   }
 }
 
