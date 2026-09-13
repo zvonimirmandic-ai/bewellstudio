@@ -339,15 +339,22 @@ section { scroll-margin-top: 96px; }
 .care-cta { margin-top: 56px; }
 
 /* ===== Znanost ===== */
-.znanost-cards { margin-top: 52px; display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 24px; max-width: 900px; }
-.znanost-card { padding: 30px 30px 34px; background: var(--light-bg); border-radius: 4px; }
+.znanost-cards { margin-top: 52px; display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 24px; }
+.znanost-card { container-type: inline-size; padding: 30px 30px 34px; background: var(--light-bg); border-radius: 4px; }
 .znanost-card.dark { background: var(--dark-green); color: #fff; }
 .znanost-card .label { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-3); }
 .znanost-card.dark .label { color: var(--pale-green); }
-.znanost-card svg.brain { display: block; width: 100%; max-width: 121px; height: auto; margin: 16px 0 8px; }
-.znanost-card svg.line { display: block; width: 100%; height: auto; margin: 0 0 18px; }
+.znanost-visual { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin: 16px 0 18px; }
+.znanost-card svg.brain { display: block; flex: none; width: 100%; max-width: 121px; height: auto; }
+.znanost-card svg.line { display: block; width: 100%; height: auto; }
 .znanost-card .caption { margin-top: 0; font-size: 17px; color: var(--muted-2); }
 .znanost-card.dark .caption { color: var(--white-82); }
+
+@container (min-width: 480px) {
+  .znanost-visual { flex-direction: row; align-items: center; gap: 32px; margin: 20px 0 22px; }
+  .znanost-card svg.brain { width: 132px; max-width: 132px; }
+  .znanost-card svg.line { flex: 1; width: auto; min-width: 0; }
+}
 .znanost-footnote { margin-top: 14px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; color: var(--muted-3); }
 
 .science-toggle {
