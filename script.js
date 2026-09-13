@@ -113,11 +113,11 @@
   var timelineLegend = Array.prototype.slice.call(document.querySelectorAll('[data-legend]'));
   var timelineDone = false;
 
-  // proportional widths matching the flex ratios in the bar: dyn2 iso3 rest1.4 dyn2 iso3 rest1.4 dyn2 iso3 stretch2
+  // proportional widths matching the flex ratios in the bar: 3 repeating cycles of dyn2 iso3 rest1.4 stretch2
   var segments = [
-    { key: 'dyn', flex: 2 }, { key: 'iso', flex: 3 }, { key: 'rest', flex: 1.4 },
-    { key: 'dyn', flex: 2 }, { key: 'iso', flex: 3 }, { key: 'rest', flex: 1.4 },
-    { key: 'dyn', flex: 2 }, { key: 'iso', flex: 3 }, { key: 'stretch', flex: 2 }
+    { key: 'dyn', flex: 2 }, { key: 'iso', flex: 3 }, { key: 'rest', flex: 1.4 }, { key: 'stretch', flex: 2 },
+    { key: 'dyn', flex: 2 }, { key: 'iso', flex: 3 }, { key: 'rest', flex: 1.4 }, { key: 'stretch', flex: 2 },
+    { key: 'dyn', flex: 2 }, { key: 'iso', flex: 3 }, { key: 'rest', flex: 1.4 }, { key: 'stretch', flex: 2 }
   ];
   var totalFlex = segments.reduce(function (s, seg) { return s + seg.flex; }, 0);
   // cumulative end proportion per unique key (last occurrence wins, i.e. how far the wipe must travel to fully reveal that key at least once)
@@ -167,6 +167,17 @@
     } else {
       runTimelineWipe();
     }
+  }
+
+  /* ---------- CARE: expand/collapse "Ako hoćeš znati više" detail ---------- */
+  var careMoreToggle = document.getElementById('careMoreToggle');
+  var careMoreDetail = document.getElementById('careMoreDetail');
+  if (careMoreToggle && careMoreDetail) {
+    careMoreToggle.addEventListener('click', function () {
+      var open = careMoreDetail.classList.toggle('open');
+      careMoreToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      careMoreToggle.textContent = open ? 'Sakrij detalje' : 'Ako hoćeš znati više…';
+    });
   }
 
   /* ---------- Znanost: expand/collapse detail ---------- */
