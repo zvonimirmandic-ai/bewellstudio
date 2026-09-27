@@ -404,9 +404,29 @@ section { scroll-margin-top: 96px; }
 /* ===== Kineziolog ===== */
 .kineziolog-name { margin-top: 26px; font-size: 21px; font-weight: 600; color: var(--dark-green); }
 .kineziolog-bio { margin-top: 14px; font-size: 19px; color: var(--ink-2); }
+.kineziolog-bio + .kineziolog-bio { margin-top: 12px; }
 .kineziolog-bio .note { color: var(--muted-3); font-size: 16px; }
 .badges { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 10px; }
 .badges span { padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border-dashed); font-size: 16px; color: var(--ink-2); }
+
+/* ===== Cjenik ===== */
+.price-standalone {
+  margin-top: 56px; padding: 30px 34px; display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap; background: var(--light-bg); border-radius: 4px;
+}
+.price-standalone h3 { font-size: 23px; color: var(--dark-green); }
+.price-standalone p { margin-top: 8px; font-size: 16.5px; color: var(--muted-2); max-width: 46em; }
+.price-tag { margin-top: 0 !important; font-family: var(--font-heading); font-size: 34px !important; color: var(--dark-green) !important; font-weight: 500; flex: none; }
+.price-group-label { margin-top: 44px; font-size: 19px; font-weight: 600; color: var(--dark-green); }
+.price-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 24px; }
+.price-card { padding: 32px 32px 8px; background: var(--light-bg); border-radius: 4px; }
+.price-card-label { font-family: var(--font-heading); font-size: 22px; color: var(--dark-green); }
+.price-list { margin-top: 20px; padding-left: 0; list-style: none; }
+.price-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 16px 0; border-top: 1px solid var(--border-light); font-size: 16.5px; color: var(--ink-2); }
+.price-list .price { flex: none; font-family: var(--font-heading); font-size: 19px; color: var(--dark-green); font-weight: 500; }
+.price-footnote { margin-top: 20px; font-size: 15px; color: var(--muted-1); max-width: 60em; }
+.price-anchor-note { color: var(--muted-3); }
+.price-cta { margin-top: 40px; }
 
 /* ===== Rezervacija CTA ===== */
 .cta-section { padding: 112px 0; background: var(--dark-green); color: #fff; text-align: center; }
