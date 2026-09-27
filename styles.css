@@ -414,6 +414,7 @@ section { scroll-margin-top: 96px; }
   margin-top: 56px; padding: 30px 34px; display: flex; align-items: center; justify-content: space-between;
   gap: 24px; flex-wrap: wrap; background: var(--light-bg); border-radius: 4px;
 }
+.price-standalone + .price-standalone { margin-top: 16px; }
 .price-standalone h3 { font-size: 23px; color: var(--dark-green); }
 .price-standalone p { margin-top: 8px; font-size: 16.5px; color: var(--muted-2); max-width: 46em; }
 .price-tag { margin-top: 0 !important; font-family: var(--font-heading); font-size: 34px !important; color: var(--dark-green) !important; font-weight: 500; flex: none; }
