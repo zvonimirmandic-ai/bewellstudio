@@ -417,16 +417,19 @@ section { scroll-margin-top: 96px; }
 .price-standalone + .price-standalone { margin-top: 16px; }
 .price-standalone h3 { font-size: 23px; color: var(--dark-green); }
 .price-standalone p { margin-top: 8px; font-size: 16.5px; color: var(--muted-2); max-width: 46em; }
-.price-tag { margin-top: 0 !important; font-family: var(--font-heading); font-size: 34px !important; color: var(--dark-green) !important; font-weight: 500; flex: none; }
+.price-tag { margin-top: 0 !important; font-family: var(--font-heading); font-size: 34px !important; color: var(--dark-green) !important; font-weight: 500; flex: none; text-align: right; }
+.price-date { display: block; margin-top: 4px; font-family: var(--font-body); font-size: 12.5px; font-weight: 400; color: var(--muted-3); }
 .price-group-label { margin-top: 44px; font-size: 19px; font-weight: 600; color: var(--dark-green); }
 .price-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 24px; }
 .price-card { padding: 32px 32px 8px; background: var(--light-bg); border-radius: 4px; }
 .price-card-label { font-family: var(--font-heading); font-size: 22px; color: var(--dark-green); }
 .price-list { margin-top: 20px; padding-left: 0; list-style: none; }
-.price-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 16px 0; border-top: 1px solid var(--border-light); font-size: 16.5px; color: var(--ink-2); }
-.price-list .price { flex: none; font-family: var(--font-heading); font-size: 19px; color: var(--dark-green); font-weight: 500; }
+.price-list li { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding: 16px 0; border-top: 1px solid var(--border-light); font-size: 16.5px; color: var(--ink-2); }
+.price-list .price { flex: none; text-align: right; font-family: var(--font-heading); font-size: 19px; color: var(--dark-green); font-weight: 500; }
+.price-list .price .price-date { font-size: 11px; margin-top: 2px; }
 .price-footnote { margin-top: 20px; font-size: 15px; color: var(--muted-1); max-width: 60em; }
 .price-anchor-note { color: var(--muted-3); }
+.price-anchor-note a { color: var(--dark-green); }
 .price-cta { margin-top: 40px; }
 
 /* ===== Rezervacija CTA ===== */
