@@ -419,6 +419,9 @@ section { scroll-margin-top: 96px; }
 .price-standalone p { margin-top: 8px; font-size: 16.5px; color: var(--muted-2); max-width: 46em; }
 .price-tag { margin-top: 0 !important; font-family: var(--font-heading); font-size: 34px !important; color: var(--dark-green) !important; font-weight: 500; flex: none; text-align: right; }
 .price-date { display: block; margin-top: 4px; font-family: var(--font-body); font-size: 12.5px; font-weight: 400; color: var(--muted-3); }
+.price-standalone-right { flex: none; text-align: right; }
+.price-book-link { display: inline-block; margin-top: 10px; font-size: 14.5px; font-weight: 600; color: var(--dark-green); text-decoration: none; }
+.price-book-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .price-group-label { margin-top: 44px; font-size: 19px; font-weight: 600; color: var(--dark-green); }
 .price-group-note { margin-top: 6px; font-size: 16px; color: var(--muted-1); max-width: 56em; }
 .price-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 24px; }
@@ -482,6 +485,12 @@ section { scroll-margin-top: 96px; }
   #care { padding-top: 84px !important; padding-bottom: 88px !important; }
   #rezervacija { padding-top: 84px !important; padding-bottom: 84px !important; }
   #o-nama .two-col, #kineziolog .two-col { gap: 44px !important; }
+}
+
+@media (max-width: 780px) {
+  .price-standalone { flex-direction: column; align-items: flex-start; padding: 26px 28px; }
+  .price-standalone-right { width: 100%; text-align: left; margin-top: 18px; }
+  .price-tag { text-align: left !important; }
 }
 
 @media print {
