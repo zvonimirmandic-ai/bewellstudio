@@ -191,14 +191,35 @@
     });
   }
 
-  /* ---------- Contact form: fake local submit ---------- */
+  /* ---------- Contact form: submit via Web3Forms ---------- */
   var contactForm = document.getElementById('contactForm');
   var sentPanel = document.getElementById('sentPanel');
+  var formError = document.getElementById('formError');
   if (contactForm && sentPanel) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      contactForm.classList.add('hidden');
-      sentPanel.classList.add('visible');
+      if (formError) formError.classList.remove('visible');
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm)
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.success) {
+            contactForm.classList.add('hidden');
+            sentPanel.classList.add('visible');
+          } else {
+            throw new Error(data.message || 'Submit failed');
+          }
+        })
+        .catch(function () {
+          if (formError) formError.classList.add('visible');
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 })();
