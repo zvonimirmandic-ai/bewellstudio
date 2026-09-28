@@ -5,9 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kolačići | BeWell Studio</title>
 <meta name="description" content="Politika kolačića BeWell studija — koje kolačiće koristimo i kako upravljati privolom.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200..700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://bewellstudio.eu/kolacici.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hr_HR">
+<meta property="og:site_name" content="BeWell Studio">
+<meta property="og:title" content="Kolačići | BeWell Studio">
+<meta property="og:description" content="Politika kolačića BeWell studija — koje kolačiće koristimo i kako upravljati privolom.">
+<meta property="og:url" content="https://bewellstudio.eu/kolacici.html">
+<meta property="og:image" content="https://bewellstudio.eu/assets/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kolačići | BeWell Studio">
+<meta name="twitter:description" content="Politika kolačića BeWell studija — koje kolačiće koristimo i kako upravljati privolom.">
+<meta name="twitter:image" content="https://bewellstudio.eu/assets/hero.webp">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -39,7 +48,6 @@
 </nav>
 
 <section class="legal-hero">
-  <div class="legal-watermark"><span>KOLAČIĆI</span></div>
   <div class="container legal-hero-inner">
     <a href="index.html" class="legal-back" data-reveal>← Natrag na početnu</a>
     <div class="legal-icon-badge" data-reveal>
@@ -47,7 +55,7 @@
     </div>
     <p class="eyebrow" style="margin-top:22px" data-reveal>Pravne informacije</p>
     <h1 data-reveal>Kolačići</h1>
-    <p class="updated" data-reveal>Zadnje ažurirano: 3. rujna 2026.</p>
+    <p class="updated" data-reveal>Zadnje ažurirano: 28. rujna 2026.</p>
   </div>
 </section>
 
@@ -57,7 +65,7 @@
   <p>Kolačići (engl. <em>cookies</em>) male su tekstualne datoteke koje web-stranica pohranjuje na vašem uređaju kako bi zapamtila vaše postavke, omogućila ispravan rad stranice ili prikupljala anonimne statističke podatke o korištenju.</p>
 
   <h2>2. Kako upravljamo privolom</h2>
-  <p>Prilikom prvog posjeta Stranici prikazuje se obavijest putem koje možete odabrati prihvaćate li samo nužne kolačiće ili sve kolačiće, uključujući one treće strane (Google Maps). Vaš odabir pohranjujemo lokalno u vašem pregledniku (<code>localStorage</code>) kako vas ne bismo ponovno pitali pri svakom posjetu. Odabir možete promijeniti u bilo kojem trenutku klikom na poveznicu „Postavke kolačića" u podnožju stranice.</p>
+  <p>Prilikom prvog posjeta Stranici prikazuje se obavijest putem koje možete odabrati prihvaćate li samo nužne kolačiće ili sve kolačiće, uključujući one treće strane (Google Maps, Google Analytics). Vaš odabir pohranjujemo lokalno u vašem pregledniku (<code>localStorage</code>) kako vas ne bismo ponovno pitali pri svakom posjetu. Odabir možete promijeniti u bilo kojem trenutku klikom na poveznicu „Postavke kolačića" u podnožju stranice.</p>
 
   <h2>3. Vrste kolačića koje koristimo</h2>
   <div class="table-wrap">
@@ -66,19 +74,23 @@
     <tbody>
       <tr><td>Nužni</td><td>Pamćenje vašeg odabira o kolačićima (<code>localStorage</code>); osnovan rad stranice</td><td>Ne — nužni su za rad stranice</td></tr>
       <tr><td>Kolačići treće strane — Google Maps</td><td>Prikaz interaktivne karte lokacije studija. Učitava se tek nakon vašeg odabira „Prihvati sve" ili klika na „Prikaži kartu"</td><td>Da</td></tr>
-      <tr><td>Google Fonts</td><td>Učitavanje web-fontova (Outfit, Source Sans 3) s Googleovih poslužitelja radi ispravnog prikaza tipografije</td><td><span class="legal-placeholder">[provjeriti — prema aktualnoj Googleovoj politici fontovi se uobičajeno serviraju bez kolačića i osobnih podataka, ali IP adresa se prenosi Googleu prilikom dohvata datoteka]</span></td></tr>
+      <tr><td>Kolačići treće strane — Google Analytics</td><td>Statistika posjećenosti stranice (broj posjetitelja, posjećene stranice, trajanje posjeta, tip uređaja). Učitava se tek nakon vašeg odabira „Prihvati sve"</td><td>Da</td></tr>
     </tbody>
   </table>
   </div>
-  <p>Trenutno ne koristimo alate za analitiku (npr. Google Analytics) niti marketinške/oglašivačke kolačiće. <span class="legal-placeholder">[Ako se u budućnosti doda analitika, oglašavanje ili slični alati (npr. Meta Pixel), ovu tablicu i banner za privolu potrebno je prije toga dopuniti novom kategorijom i popisom konkretnih kolačića.]</span></p>
+  <p>Web-fontove (Outfit, Source Sans 3) servira naš vlastiti poslužitelj, a ne Google, stoga njihovo učitavanje ne šalje nikakve podatke Googleu niti postavlja kolačiće. Trenutno ne koristimo marketinške/oglašivačke kolačiće (npr. Meta Pixel). Ako se to u budućnosti promijeni, ova tablica i banner za privolu bit će prije toga dopunjeni novom kategorijom i popisom konkretnih kolačića.</p>
 
   <h2>4. Kolačići koje postavlja Google Maps</h2>
   <p>Ako odaberete prikaz karte, Google može putem ugrađenog okvira (iframe) postaviti vlastite kolačiće (npr. za pamćenje postavki, sigurnost i statistiku) u skladu sa svojom politikom privatnosti. Ove kolačiće ne kontroliramo mi, već Google LLC. Više informacija potražite u <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleovoj politici privatnosti</a>.</p>
 
-  <h2>5. Upravljanje kolačićima u pregledniku</h2>
+  <h2>5. Google Analytics</h2>
+  <p>Koristimo Google Analytics (GA4), uslugu web-analitike tvrtke Google LLC, kako bismo razumjeli na koji način posjetitelji koriste stranicu (npr. koje se stranice najčešće posjećuju, s kojeg uređaja i preglednika) te na temelju toga poboljšavali sadržaj i funkcionalnost. Google Analytics se učitava isključivo nakon što odaberete „Prihvati sve" u banneru za privolu — ako odaberete „Samo nužni" ili ne date privolu, Google Analytics se ne učitava niti prikuplja podatke.</p>
+  <p>Podaci prikupljeni putem Google Analyticsa mogu se obrađivati na poslužiteljima izvan Europskog gospodarskog prostora, uključujući u SAD-u, pri čemu se Google oslanja na standardne ugovorne klauzule (SCC) kao mehanizam zaštite prijenosa podataka. Prema postavkama Google Analytics računa BeWell studija, podaci o događajima (event data) čuvaju se 2 mjeseca, a korisnički podaci (user data) 14 mjeseci od zadnje aktivnosti, nakon čega se automatski brišu. Više informacija potražite u <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleovoj politici privatnosti</a> i <a href="https://support.google.com/analytics/answer/6004245" target="_blank" rel="noopener">objašnjenju Google Analyticsa o korištenju podataka</a>. Prikupljanje podataka od strane Google Analyticsa možete onemogućiti i putem <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out dodatka za preglednik</a>.</p>
+
+  <h2>6. Upravljanje kolačićima u pregledniku</h2>
   <p>Kolačiće možete u bilo kojem trenutku obrisati ili blokirati putem postavki svog internetskog preglednika. Imajte na umu da onemogućavanje pojedinih kolačića može utjecati na funkcionalnost pojedinih dijelova stranice (npr. prikaz karte).</p>
 
-  <h2>6. Kontakt</h2>
+  <h2>7. Kontakt</h2>
   <p>Za pitanja o korištenju kolačića obratite nam se na <a href="mailto:bewell.studio2@gmail.com">bewell.studio2@gmail.com</a>. Za informacije o obradi osobnih podataka pogledajte našu <a href="privatnost.html">Izjavu o privatnosti</a>.</p>
 
 </div>

@@ -2,6 +2,7 @@
   'use strict';
 
   var STORAGE_KEY = 'bewell-cookie-consent'; // 'all' | 'necessary'
+  var GA_ID = 'G-Q8J29P38XX';
 
   function getConsent() {
     try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
@@ -26,8 +27,21 @@
     embed.appendChild(iframe);
   }
 
+  function loadAnalytics() {
+    if (window.__bewellAnalyticsLoaded) return;
+    window.__bewellAnalyticsLoaded = true;
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+  }
+
   function applyConsent(value) {
-    if (value === 'all') loadMap();
+    if (value === 'all') { loadMap(); loadAnalytics(); }
   }
 
   function hideBanner(banner) {
@@ -43,7 +57,7 @@
     banner.setAttribute('aria-label', 'Postavke kolačića');
     var path = (window.__bewellAssetPath || '');
     banner.innerHTML =
-      '<p>Koristimo kolačiće nužne za rad stranice te, uz vašu privolu, kolačiće treće strane (Google Maps) za prikaz lokacije studija. Više u <a href="' + path + 'kolacici.html">Politici kolačića</a>.</p>' +
+      '<p>Koristimo kolačiće nužne za rad stranice te, uz vašu privolu, kolačiće treće strane (Google Maps za prikaz lokacije, Google Analytics za statistiku posjećenosti). Više u <a href="' + path + 'kolacici.html">Politici kolačića</a>.</p>' +
       '<div class="cookie-banner-actions">' +
         '<button type="button" class="cookie-accept" id="cookieAcceptAll">Prihvati sve</button>' +
         '<button type="button" class="cookie-reject" id="cookieRejectAll">Samo nužni</button>' +
